@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/766743011901140237/82abd01c6c9a42f0af087fba6493e5d0/artifacts
+end_time: 1739274057965
+entry_point_name: ''
+experiment_id: '766743011901140237'
+lifecycle_stage: active
+run_id: 82abd01c6c9a42f0af087fba6493e5d0
+run_name: capricious-grub-670
+run_uuid: 82abd01c6c9a42f0af087fba6493e5d0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739274051816
+status: 3
+tags: []
+user_id: bryan-tchakote
