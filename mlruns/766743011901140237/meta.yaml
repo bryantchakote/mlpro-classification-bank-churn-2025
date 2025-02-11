@@ -1,0 +1,6 @@
+artifact_location: mlflow-artifacts:/766743011901140237
+creation_time: 1739271459108
+experiment_id: '766743011901140237'
+last_update_time: 1739271459108
+lifecycle_stage: active
+name: mlpro-classification-bank-churn

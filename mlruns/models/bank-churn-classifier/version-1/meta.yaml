@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1739271465553
+current_stage: None
+description: ''
+last_updated_timestamp: 1739271465553
+name: bank-churn-classifier
+run_id: 5402d67334c64fffbd866f88360b5ce1
+run_link: ''
+source: mlflow-artifacts:/766743011901140237/5402d67334c64fffbd866f88360b5ce1/artifacts/bank-churn-model
+status: READY
+status_message: null
+storage_location: mlflow-artifacts:/766743011901140237/5402d67334c64fffbd866f88360b5ce1/artifacts/bank-churn-model
+user_id: null
+version: 1
