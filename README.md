@@ -16,19 +16,54 @@ Une variable cible nous permet de dire si le client est parti (`Exited = 1`) ou 
 
 ## 📄 Structure des fichiers
 
-- `data/`
-  - `submissions/` : Fichiers de prédictions
-  - `train_data.csv` : Données avec labels
-  - `test_data.csv` : Données sans labels
-- `notebooks/`
-  - `eda.ipynb` : Analyse exploratoire des données
-  - `model.ipynb` : Préprocessing et entraînement du modèle
-- `models/` : Sauvegarde des modèles
-- `mlruns/` : Suivi des expériences avec MLflow
+```text
+- data/
+  - submissions/ : Fichiers de prédictions
+  - train_data.csv : Données avec labels
+  - test_data.csv : Données sans labels (Kaggle test)
+- notebooks/
+  - eda.ipynb : Analyse exploratoire des données
+  - model.ipynb : Préprocessing et entraînement du modèle
+- .python-version, .poetry.lock, .pyproject.toml : Fichiers de gestion de l'environnement
+```
+
+## 🔧 Setup du projet
+
+1. **Installation des dépendances**
+
+   ```sh
+   poetry install
+   ```
+
+2. **Activation de l'environnement**
+
+   ```sh
+   poetry shell
+   ```
+
+3. **Lancement du serveur MLflow**
+
+   Pour suivre les expériences avec MLflow, il faut d'abord activer le serveur :
+
+   ```sh
+   mlflow ui -p 8080
+   ```
+
+   Si vous choisisssez un autre port, veillez à modifier le notebook également : `mlflow.set_tracking_uri(uri="http://localhost:PORT")`.
+
+4. **Réinitialisation de l'environnement MLflow**
+
+   Si besoin, vous pouvez réinitialiser votre environnement MLflow en supprimant les fichiers de suivi :
+
+   ```sh
+   rm -rf mlartifacts mlruns
+   ```
+
+  Cela permettra de repartir sur une base propre pour l'expérimentation. Relancez également le serveur local pour nettoyer l'environnement sur l'interface graphique.
 
 ## 🛠️ Technologies utilisées
 
 - **Python** (Pandas, NumPy, Matplotlib, Seaborn)
-- **Machine Learning** : Scikit-Learn, XGBoost
+- **Machine Learning** : Scikit-Learn, XGBoost, Hyperopt
 - **Tracking des modèles** : MLflow
 - **Jupyter Notebook** pour l'expérimentation
